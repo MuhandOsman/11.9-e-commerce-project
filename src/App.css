@@ -1,0 +1,24 @@
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.card {
+    width: 32%;
+    border: 2px black solid;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardContainer h2 {
+    width: 100%;
+    text-align: center;
+    color: tomato;
+}
+
+
+

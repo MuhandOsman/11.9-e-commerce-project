@@ -6,12 +6,15 @@ const About = () => {
     
 
     return (
-        <div>
-           <h1>about</h1> 
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo impedit obcaecati excepturi nostrum nobis, ad laboriosam tempore ipsum fugit omnis minima sequi non dolorem enim magni. Hic, harum sunt?</p>
+        <section className="about">
+           <h1>about us</h1> 
+           <p> welcome to our Online humble MARKET , here you can find some Maybelline products with high quality and low price .  </p>
+           <p>we are sure you will fine here what you need</p>
            <Link to="/products">take a look</Link>
+
+           <p>Don't forget to add your shipping details  <Link to="/home">Go to log in </Link></p>
            
-        </div>
+        </section>
     )
 }
 

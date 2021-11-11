@@ -6,7 +6,7 @@ const Products = () => {
     const {result,addToCart} = context
 
     return (
-        <div className="cardContainer" >
+        <section className="cardContainer" >
            <h2>here we will put some products</h2> 
            {result.data.map((item)=>( 
                <div key={item.id} className="card" >
@@ -16,7 +16,7 @@ const Products = () => {
                    <button onClick={()=>addToCart(item)} >ADD to cart</button>
                </div>)
            )}
-        </div>
+        </section>
     )
 }
 

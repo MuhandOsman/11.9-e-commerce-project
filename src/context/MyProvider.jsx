@@ -8,6 +8,16 @@ const MyProvider = (props) => {
 
     const [cart,setCart]= useState([])
 
+    const [form,setForm] = useState({address : "" , email: ""})
+    const [error,setError]= useState({error:""})
+
+
+
+
+
+
+
+
     const addToCart = (element) => {
         const addItem = cart.find((item)=> item.id === element.id)
         
@@ -25,6 +35,8 @@ const MyProvider = (props) => {
     
     console.log(cart)
 
+    
+    
     const removeItem = (element) => {
         const delItem = cart.find((item) => item.id === element.id)
         const index = cart.indexOf(delItem)
@@ -32,9 +44,22 @@ const MyProvider = (props) => {
         const clone = [...cart]
         clone.splice(index,1)
         setCart(clone)
-
+    }
+    const reduceQuan = (element) => {
+        const targetItem = cart.find((item) => item.id === element.id)
+        const index = cart.indexOf(targetItem)
+        targetItem.quantity -=1
+        const clone = [...cart]
+        targetItem.quantity >= 1 ? clone.splice(index,1, targetItem) : clone.splice(index,1)
+        setCart(clone)
     }
 
+    const totalCalc = (item) => {
+       let total= cart.reduce((acc,next) => 
+          acc + (next.quantity * next.price)   
+        ,0)
+        return total
+    }
 
 
     useEffect(() => {
@@ -56,7 +81,7 @@ const MyProvider = (props) => {
     console.log(result.data);
 
     return (
-        <MyContext.Provider value={{result, addToCart, cart, removeItem}}>
+        <MyContext.Provider value={{result, addToCart, cart, removeItem,reduceQuan, totalCalc,form,setForm,error,setError}}>
             {props.children}
         </MyContext.Provider>
     )

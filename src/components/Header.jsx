@@ -6,10 +6,18 @@ const Header = () => {
         <header>
            <Link to="/" ><img src="https://i.pinimg.com/736x/3d/0a/9a/3d0a9a6068e11e8c661fae9b2cab37bc.jpg" alt="maybelline" /></Link>
             <ul>
-                <NavLink to="/" ><li>About</li></NavLink>
-                <NavLink to="/home" ><li>Home</li></NavLink>
-                <NavLink to="/products" ><li>Products</li></NavLink>
-                <NavLink to="/cart" ><li>YOUR CART</li></NavLink>
+                <NavLink to="/"  style={({ isActive }) => {
+              return { color: isActive && 'green' };
+            }}><li>About</li></NavLink>
+                <NavLink to="/home"  style={({ isActive }) => {
+              return { color: isActive && 'green' };
+            }}><li>Shippment Form</li></NavLink>
+                <NavLink to="/products"  style={({ isActive }) => {
+              return { color: isActive && 'green' };
+            }}><li>Products</li></NavLink>
+                <NavLink to="/cart"  style={({ isActive }) => {
+              return { color: isActive && 'green' };
+            }}><li>YOUR CART</li></NavLink>
             </ul>
         </header>
     )

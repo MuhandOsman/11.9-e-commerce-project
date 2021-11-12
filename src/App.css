@@ -4,14 +4,17 @@ header ul {
     list-style: none;
 }
 header {
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
     height: 10vh;
 }
 header img {
     width: 200px;
-    position : fixed;
+    position : absolute;
     top: -50px;
     z-index: -1;
+}
+header a {
+    font-size: 1.5em;
 }
 .card {
     width: 32%;
@@ -21,6 +24,7 @@ header img {
 .cardContainer {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(233, 217, 233);
 }
 
 .cardContainer h2 {
@@ -28,14 +32,17 @@ header img {
     text-align: center;
     color: tomato;
 }
-
+a {
+    text-decoration: none;
+}
 
 
 footer{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    background-color: #888;
+    background-image: url("./assets/flowers.jpg");
+    color: aliceblue;
     height: 10vh;
 }
 
@@ -56,10 +63,28 @@ section {
 
 .noItem {
     text-align: center;
-    margin-top: 300px;
+    padding-top: 300px;
     
 }
 
 label {
     display: block;
 }
+.total {
+    border : 1px solid #666;
+    position : fixed;
+    color: lime;
+    font-size: 1.4rem;
+    right: 40px;    
+    bottom: 200px;
+}
+
+.checkout {
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-size:1.2em;
+}
+

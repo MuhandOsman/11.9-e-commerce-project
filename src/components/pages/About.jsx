@@ -10,8 +10,7 @@ const About = () => {
            <h1>about us</h1> 
            <p> welcome to our Online humble MARKET , here you can find some Maybelline products with high quality and low price .  </p>
            <p>we are sure you will fine here what you need</p>
-           <Link to="/products">take a look</Link>
-
+           <Link to="/products">take a look</Link> 
            <p>Don't forget to add your shipping details  <Link to="/home">Go to log in </Link></p>
            
         </section>

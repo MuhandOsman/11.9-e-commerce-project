@@ -10,6 +10,7 @@ const MyProvider = (props) => {
 
     const [form,setForm] = useState({address : "" , email: ""})
     const [error,setError]= useState({error:""})
+    const [login, setLogin] = useState({success:false})
 
 
 
@@ -81,7 +82,7 @@ const MyProvider = (props) => {
     console.log(result.data);
 
     return (
-        <MyContext.Provider value={{result, addToCart, cart, removeItem,reduceQuan, totalCalc,form,setForm,error,setError}}>
+        <MyContext.Provider value={{result, addToCart, cart, removeItem,reduceQuan, totalCalc,form,setForm,error,setError,login, setLogin}}>
             {props.children}
         </MyContext.Provider>
     )

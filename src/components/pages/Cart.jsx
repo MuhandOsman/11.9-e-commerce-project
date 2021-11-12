@@ -1,10 +1,16 @@
 import React,{useContext} from 'react'
+import {useNavigate} from 'react-router-dom'
 import MyContext from '../../context/MyContext'
 
 const Cart = () => {
     const context = useContext(MyContext)
-    const {cart, removeItem, addToCart,reduceQuan,totalCalc} = context
+    const {cart, removeItem, addToCart,reduceQuan,totalCalc, login} = context;
 
+    const navigate = useNavigate()
+
+    const checkAndNavigate = () => {
+        login.success ? (navigate("/checkout",{ replace: true })) : (navigate("/home" ,{ replace: true }))
+    }
 
     return (
         <section className="cart" >
@@ -19,7 +25,11 @@ const Cart = () => {
               <button onClick={() =>removeItem(item)} >Remove Item</button>
           </div>
           ) }
-          <div>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</div>
+          <div className="total" >
+              <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
+              <button onClick={() =>checkAndNavigate()}>checkout</button>
+          </div>
+                
         </section>
     )
 }

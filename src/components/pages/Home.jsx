@@ -4,7 +4,7 @@ import MyContext from '../../context/MyContext'
 
 const Home = () => {
     const shop = useContext(MyContext)
-    const {form,setForm,error,setError} = shop
+    const {form,setForm,error,setError,login, setLogin} = shop
 
 
     
@@ -28,15 +28,14 @@ const Home = () => {
         setForm({address: "", email: ""})
         setError("")
      
-        /* EMAIL === form.email && ADDRESS === form.address ?  */
-        
+        EMAIL === form.email && ADDRESS === form.address ? 
+        setLogin({success:true}) : setError({error:"invalid data, please check your shipping information again"})
     }
 
     return (
         <section className="login" >
            <h2>insert your shipping details</h2>
            <form >
-               
                <label htmlFor="email">your E-mail</label>
                <input type="text" name="email" id="email" ref={userRef} value={form.email} onChange={changeHandler} /> 
                
@@ -45,9 +44,11 @@ const Home = () => {
                <input type="text" name="address" id="address" value={form.address} onChange={changeHandler}/>
 
                <button onClick={handleSubmit}>submit</button>
+           </form>
+           {login.success ? <button onClick={()=>(navigate("../products", {replace: true}))}>go to the shop</button> :
+           <p className="error">{error.error}</p> }    
 
                
-           </form>
         </section>
     )
 }

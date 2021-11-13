@@ -11,9 +11,22 @@ const Products = () => {
            <h2>Maybelline products in our shop</h2> 
            {result.data.map((item)=>( 
                <div key={item.id} className="card" >
-                   <p>{item.name}</p>
-                   <Link to="/product-detail" state={item}><img src={item.image_link} alt="makeup"  /></Link>
-                   <span> Price {item.price} $</span>
+                   
+                   <Link to="/product-detail" state={item}>
+                    <div className="flip-box">
+                        <div className="flip-img">
+                            <div className="front">
+                                <img src={item.image_link} alt="makeup" />
+                            </div>
+                            <div className="back">
+                                <p>{item.name}</p>    
+                                <span> Price {item.price} $</span>
+                            </div>
+                        </div>
+                   </div>
+                       
+                    </Link>
+                   
                    <button onClick={()=>addToCart(item)} >ADD to cart</button>
                </div>)
            )}

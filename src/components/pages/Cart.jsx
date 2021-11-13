@@ -14,7 +14,7 @@ const Cart = () => {
 
     return (
         <section className="cart" >
-          {cart.length === 0 ? <h2 className="noItem" >there is no items in your cart</h2> : cart.map((item)=>
+          {cart.length === 0 ? <h2 className="noItem error" >there is no items in your cart</h2> : cart.map((item)=>
           <div key={item.id}>
               <p>{item.name}</p>
               <img src={item.image_link} alt="cartItem" />

@@ -18,8 +18,8 @@ const Cart = () => {
           <div key={item.id}>
               <p>{item.name}</p>
               <img src={item.image_link} alt="cartItem" />
-              <p>Price {(item.price * item.quantity).toFixed(2)} €</p>
-              <h2>{item.quantity}</h2>
+              <p>Price : {(item.price * item.quantity).toFixed(2)} €</p>
+              <h2>quantity :{item.quantity}</h2>
               <button onClick={() =>addToCart(item)}>+</button>
               <button onClick={() =>reduceQuan(item)}>-</button>
               <button onClick={() =>removeItem(item)} >Remove Item</button>
@@ -27,7 +27,7 @@ const Cart = () => {
           ) }
           <div className="total" >
               <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
-              <button onClick={() =>checkAndNavigate()}>checkout</button>
+              {cart.length > 0 && <button onClick={() =>checkAndNavigate()}>checkout</button>}
           </div>
                 
         </section>

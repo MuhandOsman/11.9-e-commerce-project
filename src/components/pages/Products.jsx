@@ -20,14 +20,15 @@ const Products = () => {
                             </div>
                             <div className="back">
                                 <p>{item.name}</p>    
-                                <span> Price {item.price} $</span>
+                                <span> Price : {item.price} €</span>
                             </div>
                         </div>
                    </div>
                        
                     </Link>
-                   
+                    <h3>Category :{item.category === null ? "check details" : item.category}</h3>
                    <button onClick={()=>addToCart(item)} >ADD to cart</button>
+                    <span> Price {item.price} €</span>
                </div>)
            )}
         </section>

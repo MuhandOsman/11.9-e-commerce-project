@@ -2,8 +2,11 @@ header ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
+    align-items: center;
+    padding-top: 30px;
 }
 header {
+    
     border-bottom: 2px solid black;
     height: 10vh;
 }
@@ -15,9 +18,10 @@ header img {
 }
 header a {
     font-size: 1.5em;
+    color: chocolate;
 }
 .card {
-    width: 32%;
+    width: 24%;
     border: 2px black solid;
 }
 
@@ -31,6 +35,9 @@ header a {
     width: 100%;
     text-align: center;
     color: tomato;
+}
+.cardContainer h3 {
+    margin: 10px;
 }
 a {
     text-decoration: none;
@@ -66,6 +73,13 @@ section {
     padding-top: 300px;
     
 }
+.item {
+    border: 1px solid #666;
+    margin: 20px;
+}
+.item span {
+    margin:20px;
+}
 
 label {
     display: block;
@@ -93,6 +107,13 @@ label {
 }
 .product-detail h1 {
     color: #d87093;
+}
+.to-shop {
+    width: 50%;
+    display: block;
+    margin:40px auto;
+    height: 2em;
+    
 }
 
 

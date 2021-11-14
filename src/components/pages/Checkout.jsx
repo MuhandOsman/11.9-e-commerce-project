@@ -13,13 +13,13 @@ const Checkout = () => {
             {cart.map((item) => (
               <div key={item.id} className="item">
                   <h3 >{item.name}</h3>
-                  <span>item price :{item.price * item.quantity}</span>
+                  <span>item price :{(item.price * item.quantity).toFixed(2)}</span>
                   <span>item quantity : {item.quantity}</span>
               </div>  
             ))}
             <div className="total" >
               <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
-              
+              <button>continue shopping</button>
           </div>
         </section>
     )

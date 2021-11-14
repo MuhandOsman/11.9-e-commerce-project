@@ -15,8 +15,9 @@ const ProductDetail = () => {
     return (
         <section className="product-detail">
           <h1 style={{color: `${item.product_colors[0].hex_value}`}} >{item.name}</h1>
-          <h3>{item.description}</h3>
-          {item.product_colors.map((element,index)=>(<span key={index} style={{backgroundColor:`${element.hex_value}`}} >{element.colour_name === null ? element.hex_value :element.colour_name}</span> ))} 
+          <h3>DESCRIPTION : {item.description}</h3>
+          <h3>COLORS AVAILABLE : {item.product_colors.map((element,index)=>(<span key={index} style={{backgroundColor:`${element.hex_value}`}} >{element.colour_name === null ? element.hex_value :element.colour_name}</span> ))}</h3>
+           
           <p style={{color:"red"}} >Price{item.price}€</p> 
           <button onClick={()=> addToCart(item)}>ADD to cart</button>
           <button onClick={() =>navigate(-1)}>return to shop</button>

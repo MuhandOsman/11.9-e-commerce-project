@@ -45,7 +45,7 @@ const Home = () => {
 
                <button onClick={handleSubmit}>submit</button>
            </form>
-           {login.success ? <button onClick={()=>(navigate("../products", {replace: true}))}>go to the shop</button> :
+           {login.success ? <button className="to-shop" onClick={()=>(navigate("../products", {replace: true}))}>go to the shop</button> :
            <p className="error">{error.error}</p> }    
 
                

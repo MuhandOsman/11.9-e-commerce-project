@@ -1,10 +1,13 @@
 import React,{useContext} from 'react'
-/* import {useNavigate} from 'react-router-dom' */
+
+import {useNavigate} from 'react-router-dom'
 import MyContext from '../../context/MyContext'
 
 const Checkout = () => {
     const context = useContext(MyContext)
     const {cart,totalCalc} = context;
+
+    const navigate = useNavigate()
 
     return (
         <section  className="checkout">
@@ -19,7 +22,7 @@ const Checkout = () => {
             ))}
             <div className="total" >
               <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
-              <button>continue shopping</button>
+              <button onClick={()=> navigate(-1)} >continue shopping</button>
           </div>
         </section>
     )

@@ -44,13 +44,14 @@ a {
 }
 
 
+
 footer{
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     background-image: url("./assets/flowers.jpg");
     color: aliceblue;
-    height: 10vh;
+    height: 12vh;
 }
 
 .about {
@@ -59,9 +60,23 @@ footer{
     background-size: cover;
     height:75vh;
 }
+.about a {
+    border : 1px solid #666;
+    padding: 5px;
+    border-radius: 10px;
+}
+.login {
+    background-image: url("./assets/instrument.jpg");
+    background-position: left  75%;
+    background-size: cover;
+}
+.login h2 {
+    margin: 0;
+    padding: 10px;
+}
 
-h1, h2, h3 {
-    margin :0px;
+.cartItem {
+    border-bottom: 1px solid #666;
 }
 
 section {
@@ -71,6 +86,7 @@ section {
 .noItem {
     text-align: center;
     padding-top: 300px;
+    margin: 0;
     
 }
 .item {
@@ -84,10 +100,17 @@ section {
 label {
     display: block;
 }
+
+.btn {
+    margin:0 5px ;
+    padding:5px;
+}
+
 .total {
     border : 1px solid #666;
+    border-radius: 10px;
     position : fixed;
-    color: lime;
+    color: brown;
     font-size: 1.4rem;
     right: 40px;    
     bottom: 200px;
@@ -101,12 +124,19 @@ label {
     color: red;
     font-size:1.4em;
 }
-
-.product-detail h1, .product-detail span, .product-detail h3{
-    margin:20px 0;
+.product-detail {
+    background-image: url("./assets/makecolor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
 }
-.product-detail h1 {
-    color: #d87093;
+.product-detail h1, .product-detail span, .product-detail h3{
+    padding:20px 0;
+    margin: 0;
+}
+.description {
+    color: bisque;
+    width: 50%;
 }
 .to-shop {
     width: 50%;

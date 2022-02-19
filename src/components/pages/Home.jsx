@@ -37,11 +37,11 @@ const Home = () => {
            <h2>insert your shipping details</h2>
            <form >
                <label htmlFor="email">your E-mail</label>
-               <input type="text" name="email" id="email" ref={userRef} value={form.email} onChange={changeHandler} /> 
+               <input type="text" name="email" id="email" ref={userRef} value={form.email} placeholder="newmail@gmail.com" onChange={changeHandler} /> 
                
                
                <label htmlFor="address">your shipping address</label>
-               <input type="text" name="address" id="address" value={form.address} onChange={changeHandler}/>
+               <input type="text" name="address" id="address" value={form.address} placeholder="wallstreet11" onChange={changeHandler}/>
 
                <button onClick={handleSubmit}>submit</button>
            </form>

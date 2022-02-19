@@ -21,11 +21,14 @@ header a {
     color: chocolate;
 }
 .card {
+    min-width: 200px;
     width: 24%;
     border: 2px black solid;
 }
 
 .cardContainer {
+    width:90%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(233, 217, 233);
@@ -60,6 +63,10 @@ footer{
     background-size: cover;
     height:75vh;
 }
+
+.about-info {
+    padding: 3vw;
+}
 .about a {
     border : 1px solid #666;
     padding: 5px;
@@ -71,15 +78,21 @@ footer{
     background-size: cover;
 }
 .login h2 {
-    margin: 0;
-    padding: 10px;
+    margin: 0 3vw;
+    padding: 20px 0;
+}
+.login form {
+    padding:3vw;
 }
 
 .cartItem {
     border-bottom: 1px solid #666;
+    padding: 40px;
+    
 }
 
 section {
+   
     min-height: 75vh;
 }
 
@@ -107,6 +120,7 @@ label {
 }
 
 .total {
+    padding:10px;
     border : 1px solid #666;
     border-radius: 10px;
     position : fixed;
@@ -170,13 +184,14 @@ label {
     box-shadow: 0px 0px 10px 2px gray;
     border: 10px solid white;
     border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 /* front and back img/text position absolute to the parent div
-  (on top of each other*/
+(on top of each other*/
 .front {
     position: absolute;
     cursor: pointer;
-    backface-visibility: hidden;
 }
 .front img {
     width: 100%;

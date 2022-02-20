@@ -3,7 +3,7 @@ import NavLinks from './NavLinks'
 
 const Navigation = () => {
   return (
-    <nav className="navigation">
+    <nav className="Navigation">
       <NavLinks />
     </nav>
   )

@@ -1,0 +1,41 @@
+ ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    padding: 15px 0;
+}
+
+ a {
+    font-size: 1.5em;
+    color: chocolate;
+}
+
+.NavBar .MobileNav {
+    display:none ;
+}
+
+@media (max-width:780px) {
+    .NavBar .Navigation {
+        display: none;
+    }
+
+    .NavBar .MobileNav {
+        display: flex;
+        align-items: center;  
+    }
+    .MobileNav .Hamburger {
+        position: absolute;
+        right: 5%;
+        top: 5%;
+        cursor: pointer;
+    }
+    .NavBar ul {
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 63px;
+        background-color: rgba(212, 174, 124, 0.5);
+    }
+
+}

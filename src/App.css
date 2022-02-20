@@ -1,10 +1,4 @@
-header ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    align-items: center;
-    padding-top: 30px;
-}
+
 header {
     
     border-bottom: 2px solid black;
@@ -16,10 +10,7 @@ header img {
     top: -50px;
     z-index: -1;
 }
-header a {
-    font-size: 1.5em;
-    color: chocolate;
-}
+
 .card {
     min-width: 200px;
     width: 24%;
@@ -46,8 +37,6 @@ header a {
 a {
     text-decoration: none;
 }
-
-
 
 footer{
     display: flex;

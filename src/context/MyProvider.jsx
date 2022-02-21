@@ -33,10 +33,7 @@ const MyProvider = (props) => {
             setCart(clone)
         }
     }
-    
-    console.log(cart)
-
-    
+   
     
     const removeItem = (element) => {
         const delItem = cart.find((item) => item.id === element.id)
@@ -66,7 +63,7 @@ const MyProvider = (props) => {
     useEffect(() => {
         try {
             const getData = async () => {
-                const resp = await fetch('http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
+                const resp = await fetch('https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
                 const data = await resp.json()
                 data.map((item) => (item.product_colors.length === 0 && item.product_colors.push({hex_value:"#d87093" , colour_name:"palevioletred"})))
                 setResult({data:data, loading:false, error: ""})

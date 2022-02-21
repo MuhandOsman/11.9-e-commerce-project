@@ -13,12 +13,6 @@ const MyProvider = (props) => {
     const [login, setLogin] = useState({success:false})
 
 
-
-
-
-
-
-
     const addToCart = (element) => {
         const addItem = cart.find((item)=> item.id === element.id)
         
@@ -33,7 +27,6 @@ const MyProvider = (props) => {
             setCart(clone)
         }
     }
-   
     
     const removeItem = (element) => {
         const delItem = cart.find((item) => item.id === element.id)
@@ -76,8 +69,6 @@ const MyProvider = (props) => {
 
     if (result.loading) return (<p>loading...</p> )
 
-
-    console.log(result.data);
 
     return (
         <MyContext.Provider value={{result, addToCart, cart, removeItem,reduceQuan, totalCalc,form,setForm,error,setError,login, setLogin}}>

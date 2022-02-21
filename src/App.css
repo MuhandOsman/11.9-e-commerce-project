@@ -2,12 +2,13 @@
 header {
     
     border-bottom: 2px solid black;
-    height: 10vh;
+    height: 5vh;
 }
 header img {
+    height:150px;
     width: 200px;
     position : absolute;
-    top: -50px;
+    top: -20px;
     z-index: -1;
 }
 
@@ -44,7 +45,7 @@ footer{
     align-items: flex-end;
     background-image: url("./assets/flowers.jpg");
     color: aliceblue;
-    height: 12vh;
+    height: 13vh;
 }
 
 .about {
@@ -83,7 +84,7 @@ footer{
 
 section {
    
-    min-height: 75vh;
+    min-height: 80vh;
 }
 
 .noItem {

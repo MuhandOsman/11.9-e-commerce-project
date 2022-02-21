@@ -18,7 +18,7 @@ const NavLinks = () => {
           return { color: isActive && "green" };
         }}
       >
-        <li>Shippment Form</li>
+        <li>Shipment Form</li>
       </NavLink>
       <NavLink
         to="/products"
@@ -34,7 +34,7 @@ const NavLinks = () => {
           return { color: isActive && "green" };
         }}
       >
-        <li>YOUR CART</li>
+        <li>CART</li>
       </NavLink>
     </ul>
   );

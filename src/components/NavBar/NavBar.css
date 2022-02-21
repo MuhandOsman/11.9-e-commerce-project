@@ -3,7 +3,8 @@
     justify-content: space-around;
     list-style: none;
     align-items: center;
-    padding: 15px 0;
+    padding: 5px 0;
+    margin-left: 150px;
 }
 
  a {
@@ -27,14 +28,14 @@
     .MobileNav .Hamburger {
         position: absolute;
         right: 5%;
-        top: 5%;
+        top: 10px;
         cursor: pointer;
     }
     .NavBar ul {
         flex-direction: column;
         position: absolute;
         right: 20px;
-        top: 63px;
+        top: 35px;
         background-color: rgba(212, 174, 124, 0.5);
     }
 

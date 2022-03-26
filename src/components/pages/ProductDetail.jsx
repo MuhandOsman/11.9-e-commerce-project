@@ -7,22 +7,27 @@ const ProductDetail = () => {
     const {addToCart} = context
 
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation();
     const item = location.state;
     console.log(item);
 
     return (
         <section className="product-detail">
-          <h1 style={{color: `${item.product_colors[0].hex_value}` , backgroundColor:"black"}} >{item.name}</h1>
-          <h3 className="description">DESCRIPTION : {item.description}</h3>
-          <h3>COLORS AVAILABLE : {item.product_colors.map((element,index)=>(<span key={index} style={{backgroundColor:`${element.hex_value}`}} >{element.colour_name === null ? element.hex_value :element.colour_name}</span> ))}</h3>
+          <h1 style={{color: `${item.product_colors[0].hex_value}`}} >{item.name}</h1>
+          <div className="product-contain">
+            <div className="prod-data">
+              <h3 className="description">DESCRIPTION : {item.description.split("•").map((item,index )=> <p key={index}>• {item}</p>)}</h3>
+              <h3>COLORS AVAILABLE : {item.product_colors.map((element,index)=>(<span key={index} style={{backgroundColor:`${element.hex_value}` , margin:"5px" , padding:"5px", display:"inline-block", borderRadius:"5px"}} >{element.colour_name === null ? element.hex_value :element.colour_name}</span> ))}</h3>
            
-          <p style={{color:"red"}} >Price{item.price}€</p> 
-          <button className="btn" onClick={()=> addToCart(item)}>ADD to cart</button>
-          <button className="btn" onClick={() =>navigate(-1)}>return to shop</button>
-          <br />
-          <img src={item.image_link} alt="" />
+              <h4 style={{color:"white" }} >Price: {item.price} €</h4> 
+              <button className="btn" onClick={()=> addToCart(item)}>ADD to cart</button>
+              <button className="btn" onClick={() =>navigate(-1)}>return to shop</button>
+            </div>
+          
+            <div className="prod-img"><img src={item.image_link}  alt="product-img" /></div>
+            
+          </div>
         </section>
     )
 }

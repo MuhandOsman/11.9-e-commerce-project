@@ -13,8 +13,8 @@ header img {
 }
 
 .card {
-    min-width: 200px;
-    width: 24%;
+    min-width:280px;
+    flex-grow: 1;
     border: 2px black solid;
     padding: 5px;
 }
@@ -25,6 +25,7 @@ header img {
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(233, 217, 233);
+    gap: 5px;
 }
 
 .cardContainer h2 {
@@ -121,8 +122,12 @@ label {
 .btn {
     margin:0px 10px 10px 0px ;
     padding:5px;
+    border-radius: 5px;
 }
-
+.btn:hover {
+    color: mediumpurple;
+    cursor: pointer;
+}
 .total {
     padding:10px;
     border : 1px solid #666;
@@ -147,10 +152,30 @@ label {
     padding:20px 0;
     margin: 0;
 }
+
+.product-detail h1 {
+    background-color:black;
+    text-align: center;
+    width:70%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
 .description {
     color: bisque;
     width: 50%;
+    padding:10px;
 }
+.product-contain {
+    display: flex;
+    flex-wrap: wrap;
+}
+.prod-img {
+    padding:10vw 20px;
+}
+.prod-data {
+    max-width:800px;
+}
+
 .to-shop {
     width: 50%;
     display: block;
@@ -216,4 +241,8 @@ label {
         background-color: aqua;
         
     }
+    .product-detail h1, .description {
+        width: 100%;
+    }
+    
 }

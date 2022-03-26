@@ -7,5 +7,4 @@ const Footer = () => {
         </footer>
     )
 }
-/* Home, About, Products, ProductDetail, Cart and Checkout */
 export default Footer

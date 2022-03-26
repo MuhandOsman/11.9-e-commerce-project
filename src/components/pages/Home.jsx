@@ -4,7 +4,7 @@ import MyContext from '../../context/MyContext'
 
 const Home = () => {
     const shop = useContext(MyContext)
-    const {form,setForm,error,setError,login, setLogin} = shop
+    const {form,setForm,error,setError, setLogin} = shop
 
 
     
@@ -21,7 +21,10 @@ const Home = () => {
     const changeHandler = (e) => {
         setForm({...form, [e.target.name]: e.target.value})
     }
-
+    const checkAndNavigate = () => {
+        setLogin({success:true});
+        navigate("../products", {replace: true})
+    }
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -29,7 +32,8 @@ const Home = () => {
         setError("")
      
         EMAIL === form.email && ADDRESS === form.address ? 
-        setLogin({success:true}) : setError({error:"invalid data, please check your shipping information again"})
+        checkAndNavigate() : setError({error:"invalid data, please check your shipping information again"})
+        
     }
 
     return (
@@ -45,7 +49,7 @@ const Home = () => {
 
                <button onClick={handleSubmit}>submit</button>
            </form>
-           {login.success ? <button className="to-shop" onClick={()=>(navigate("../products", {replace: true}))}>go to the shop</button> :
+           {error.error && 
            <p className="error">{error.error}</p> }    
 
                

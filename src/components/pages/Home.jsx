@@ -46,8 +46,9 @@ const Home = () => {
                
                <label htmlFor="address">your shipping address</label>
                <input type="text" name="address" id="address" value={form.address} placeholder="wallstreet11" onChange={changeHandler}/>
-
-               <button onClick={handleSubmit}>submit</button>
+                <div style={{marginTop:"2rem"}}>
+                    <button className="btn btn-15 custom-btn"onClick={handleSubmit}><span>submit</span></button>
+                </div>
            </form>
            {error.error && 
            <p className="error">{error.error}</p> }    

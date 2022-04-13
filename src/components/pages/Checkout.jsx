@@ -22,7 +22,7 @@ const Checkout = () => {
             ))}
             <div className="total" >
               <p>TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} €</p>
-              <button onClick={()=> navigate(-1)} >back to shop</button>
+              <button className="btn-15 custom-btn" onClick={()=> navigate(-1)} >back to shop</button>
           </div>
         </section>
     )

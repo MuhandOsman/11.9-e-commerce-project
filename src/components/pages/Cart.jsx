@@ -20,14 +20,16 @@ const Cart = () => {
               <img src={item.image_link} alt="cartItem" />
               <p className="error">Price : {(item.price * item.quantity).toFixed(2)} €</p>
               <h2>quantity :{item.quantity}</h2>
-              <button className="btn" onClick={() =>addToCart(item)}>+</button>
-              <button className="btn" onClick={() =>reduceQuan(item)}>-</button>
-              <button className="btn" onClick={() =>removeItem(item)} >Remove Item</button>
+              <div className="btn-group">
+              <button className="btn-7 custom-btn" onClick={() =>addToCart(item)}> <span style={{fontSize:"2em"}}>+</span> </button>
+              <button className="btn-7 custom-btn" onClick={() =>reduceQuan(item)}><span style={{fontSize:"3em"}}>-</span></button>
+              <button className="btn-7 custom-btn" onClick={() =>removeItem(item)} > <span>Remove Item</span> </button>
+              </div>
           </div>
           ) }
           <div className="total" >
               <p> TOTAL PRICE : {(totalCalc(cart)).toFixed(2)} € </p>
-              {cart.length > 0 && <button onClick={() =>checkAndNavigate()}>checkout</button>}
+              {cart.length > 0 && <button className="btn-15 custom-btn" onClick={() =>checkAndNavigate()}> <span>checkout</span> </button>}
           </div>
                 
         </section>

@@ -27,7 +27,7 @@ const Products = () => {
                        
                     </Link>
                     <h3>Category :{item.category === null ? "check details" : item.category}</h3>
-                   <button onClick={()=>addToCart(item)} >ADD to cart</button>
+                   <button className="btn-15 custom-btn"onClick={()=>addToCart(item)} ><span>ADD to cart</span></button>
                     <span> Price {item.price} €</span>
                </div>)
            )}
